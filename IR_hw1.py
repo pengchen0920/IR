@@ -1,3 +1,24 @@
+"""
+若遇到SSL錯誤訊息，請輸入：
+
+
+import nltk
+import ssl
+
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+else:
+    ssl._create_default_https_context = _create_unverified_https_context
+
+nltk.download()
+
+
+(資料來源：https://stackoverflow.com/questions/41348621/ssl-error-downloading-nltk-data)
+"""
+
+
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem.porter import PorterStemmer
 from nltk.corpus import stopwords
