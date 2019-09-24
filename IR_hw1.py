@@ -28,7 +28,7 @@ with open("IR_hw1_input.txt") as fp:
     lines = fp.read().splitlines()
 
 text = ""
-text = "".join(lines)
+text = " ".join(lines)
 
 
 # (1)Tokenization
